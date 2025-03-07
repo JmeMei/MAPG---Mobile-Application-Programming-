@@ -22,28 +22,6 @@ This project is a **Flutter-based mobile application** designed to replicate the
 - Includes a **Dropdown Button widget** to view semester modules dynamically.
 - Users can return to the main page via a **“Return to Main Page” button**, with a **SnackBar notification**.
 
-## Enhancements & Technical Features 🛠
-### **1. Horizontal Scroll View**
-- Used to display alumni details.
-- Implemented using `scrollDirection: Axis.horizontal` inside **ListView**.
-
-### **2. Icons 🎨**
-- Integrated with dropdown menus for better UI clarity.
-- Positioned dynamically using `isExpanded: true`.
-
-### **3. Animations 🎬**
-- Implemented using **Lottie animations**.
-- Configured in `pubspec.yaml` via `lottie: ^1.0.2`.
-- Imported animations from **LottieFiles**.
-
-### **4. Card Widget 🃏**
-- Used to enhance **visual appeal** of course information.
-- Implements **gradient backgrounds** for better readability.
-
-### **5. Dropdown Button Widget 📂**
-- Allows users to **select different semesters**.
-- Uses `DropdownMenuItem<String>` to display corresponding **modules**.
-
 ## Technologies Used 💻
 - **Flutter** (Dart)
 - **Android Studio**
