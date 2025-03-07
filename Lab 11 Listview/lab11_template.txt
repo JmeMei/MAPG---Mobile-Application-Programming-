@@ -1,0 +1,61 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MaterialApp(home: Application()));
+}
+
+class Application extends StatefulWidget {
+  const Application({Key? key}) : super(key: key);
+
+  @override
+  _ApplicationState createState() => _ApplicationState();
+}
+
+class _ApplicationState extends State<Application> {
+  final itemHolder = TextEditingController();
+
+  @override
+  Widget build(BuildContext context) {
+    String newItem = '';
+
+    return Scaffold(
+      body: Column(
+        children: [
+          Container(
+            padding: const EdgeInsets.all(20.0),
+            child: const Text(
+              'Shopping List',
+              style: TextStyle(fontSize: 28),
+            ),
+          ),
+          TextField(
+            controller: itemHolder,
+            autofocus: true,
+            autocorrect: true,
+            textAlign: TextAlign.center,
+            decoration:
+                const InputDecoration(hintText: 'Enter shopping item here:'),
+            onChanged: (newText) {
+              newItem = newText;
+            },
+          ),
+          SizedBox(
+            width: double.infinity,
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                primary: Colors.lightBlue,
+                onPrimary: Colors.white,
+              ),
+              onPressed: () {
+                setState(() {
+                  itemHolder.clear();
+                });
+              },
+              child: const Text('Add'),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
